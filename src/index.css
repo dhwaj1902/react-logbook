@@ -5,9 +5,180 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #dfe6e9;
+}
+
+.calender {
+  margin: auto;
+  width: 450px;
+  height: 800px;
+  background-color: #fff;
+  overflow: scroll;
+}
+
+.weekends{
+  display: flex;
+  padding: 7px 0;
+  background-color: #fff;
+}
+.weekends div{
+  width: 14.28%;
+  text-align: center;
+}
+
+.week{
+  border: 1px solid black;
+  color: black;
+  font-weight: bold;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.days div{
+  width: 14.28%;
+}
+
+.day {
+  border: 1px solid black;
+  min-height: 16vh;
+  justify-content: center;
+  text-align: center;
+  /* padding: 12px; */
+}
+.daytoday {
+  border: 1px solid black;
+  background-color: rgb(28, 145, 255);
+  /* min-height: 16vh; */
+}
+
+.th-bold{
+  font-weight: bold;
+}
+
+.today-button{
+  position: absolute;
+  bottom: 10px;
+  background-color: rgb(28, 145, 255);
+  border-radius: 50%;
+  z-index: 100;
+  right: 10px;
+}
+
+.sun{
+  background-color: rgb(219, 219, 219);
+}
+
+.color-bullet{
+  height: auto;
+  width: fit-content !important;
+  border-radius: 50%;
+  margin: auto;
+  text-align: center !important;
+  padding: 15%;
+}
+
+.w{
+background-color: #F6D0E5;
+}
+
+.deep-conditioning{
+background-color: #DDEDEA;
+}
+
+.protein-treatment{
+background-color: #DDEBF1;
+}
+
+.clarifying {
+background-color: #FBE4E4;
+}
+
+.hair-color{
+  background-color: #F4DFEB;
+}
+
+.hair-cut{
+  background-color: #F4DFEB;
+}
+
+.calendarCard-container{
+  padding: 0 5px;
+}
+
+.calendarCard{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calendarCard__img{
+  height: 104px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.th-8{
+  font-size: 8px;
+  font-weight: bold;
+}
+
+.th-9{
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.th-16{
+  font-size: 15px;
+}
+
+.close{
+  right: 5px;
+  top: 5px
+}
+
+.crosoule {
+  margin: auto;
+  width: 400px;
+  height: 800px;
+  background-color: #0000;
+  overflow: scroll;
+}
+.MuiDialog-paperFullScreen{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  max-width: 100%;
+  max-height: none;
+  border-radius: 0;
+  background-color: black !important
+}
+.carousel-indicators li { visibility: hidden; }
+
+.star-ratings{
+  display: flex !important;
+  width: '25%' !important;
+}
+
+.star{
+  width: '10%'!important;
+}
+
+.star-container{
+  width: '10%'!important;
 }
