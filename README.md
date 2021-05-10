@@ -18,3 +18,4 @@ Quinn Front-end Assignemnt for Internship.
 
 <h2>Video</h2>
 Link: https://drive.google.com/file/d/19tiE5Hwj-Iu3UukH3D6H6tpd_7rE73U0/view?usp=sharing
+Infinite Scroll Video: https://drive.google.com/file/d/1axHjpL1fpTCadMQpZLec4B0v8OTuAAi7/view?usp=sharing
