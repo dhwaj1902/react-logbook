@@ -2,6 +2,8 @@ import React from "react";
 import moment from "moment";
 import { Calendar } from "react-feather";
 import StarRatings from "react-star-ratings";
+import Tooltip from "@material-ui/core/Tooltip";
+
 class Calander extends React.Component {
   constructor(props) {
     super(props);
@@ -165,9 +167,11 @@ class Calander extends React.Component {
             </div>
           </div>
         </div>
-        <div onClick={this.executeScroll} className="today-button p-3">
-          <Calendar />
-        </div>
+        <Tooltip title="Today Date" aria-label="add">
+          <div onClick={this.executeScroll} className="today-button p-3">
+            <Calendar />
+          </div>
+        </Tooltip>
       </>
     );
   }

@@ -76,6 +76,7 @@ class Carousal extends React.Component {
                       size={15}
                       activeColor="#95D0F0"
                       style={{ width: "100%" }}
+                      edit={false}
                     />
                   </div>
                   <Card.Text className="th-16">{item.text}</Card.Text>

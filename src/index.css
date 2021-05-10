@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
+  user-select: none;
 }
 
 code {
@@ -22,7 +23,7 @@ code {
 
 .calender {
   margin: auto;
-  width: 450px;
+  width: 700px;
   height: 800px;
   background-color: #fff;
   overflow: scroll;
@@ -77,6 +78,7 @@ code {
   border-radius: 50%;
   z-index: 100;
   right: 10px;
+  cursor: pointer;
 }
 
 .sun{
@@ -116,21 +118,11 @@ background-color: #FBE4E4;
   background-color: #F4DFEB;
 }
 
-.calendarCard-container{
-  padding: 0 5px;
-}
-
 .calendarCard{
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.calendarCard__img{
-  height: 104px;
-  width: 100%;
-  margin-top: 10px;
 }
 
 .th-8{
@@ -149,7 +141,8 @@ background-color: #FBE4E4;
 
 .close{
   right: 5px;
-  top: 5px
+  top: 5px;
+  cursor: pointer;
 }
 
 .crosoule {
@@ -181,4 +174,26 @@ background-color: #FBE4E4;
 
 .star-container{
   width: '10%'!important;
+}
+
+/* Scroll bar*/
+@media only screen and (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 }
