@@ -15,4 +15,4 @@ Quinn Front-end Assignemnt for Internship.
   </p>
 
 <h2>Video</h2>
-Link: https://drive.google.com/file/d/123QtZ8WtrkBv-GoWTyo1J1x4PNLQUl6N/view?usp=sharing
+Link: https://drive.google.com/file/d/19tiE5Hwj-Iu3UukH3D6H6tpd_7rE73U0/view?usp=sharing
