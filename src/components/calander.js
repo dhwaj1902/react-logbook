@@ -8,11 +8,13 @@ class Calander extends React.Component {
   constructor(props) {
     super(props);
     this.myRef = React.createRef();
+    this.myTop = React.createRef();
   }
   state = {
     dates: [],
     data: [],
     dataDate: [],
+    dates1: [],
   };
 
   componentDidMount = () => {
@@ -63,11 +65,64 @@ class Calander extends React.Component {
 
   executeScroll = () => this.myRef.current.scrollIntoView();
 
+  scrollCheck = (event) => {
+    // console.log(event.target.scrollTop);
+    const bottom =
+      Math.floor(event.target.scrollHeight - event.target.scrollTop) <=
+      event.target.clientHeight + 20;
+    const top = event.target.scrollTop === 0;
+    if (bottom) {
+      // console.log("At The Bottom");
+      var date = new Date(this.state.dates[this.state.dates.length - 1]);
+      var endDate = new Date(
+        date.getFullYear() + 1,
+        date.getMonth(),
+        date.getDate()
+      );
+      var arr = this.state.dates;
+      for (var i = date; i < endDate; i.setDate(i.getDate() + 1)) {
+        arr.push(new Date(i));
+      }
+      this.setState({ dates: arr });
+    }
+    if (top) {
+      // console.log("At The Top");
+      var date = new Date(this.state.dates[0]);
+      for (var i = 0; i < 7; i++) {
+        if (this.state.dates[i] !== "") {
+          date = new Date(this.state.dates[i]);
+          break;
+        }
+      }
+      var endDate = new Date(
+        date.getFullYear() - 1,
+        date.getMonth(),
+        date.getDate()
+      );
+      var arr = [];
+      var todayDay = endDate.getDay();
+      for (var i = 0; i < todayDay; i++) {
+        arr.push("");
+      }
+      for (var i = endDate; i < date; i.setDate(i.getDate() + 1)) {
+        arr.push(new Date(i));
+      }
+      // var arrr = this.state.dates;
+      for (var i = 0; i < this.state.dates.length; i++) {
+        if (this.state.dates[i] !== "") {
+          arr.push(this.state.dates[i]);
+        }
+      }
+      this.setState({ dates: arr });
+      console.log(arr, todayDay);
+    }
+  };
+
   render() {
     return (
       <>
         <div className="wrapper">
-          <div className="calender">
+          <div className="calender" onScroll={this.scrollCheck}>
             <div className="weekends sticky-top">
               <div className="week sun">Sun</div>
               <div className="week">Mon</div>
